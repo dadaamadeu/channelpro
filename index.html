@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChannelPro — gestão do canal como empresa</title>
+  <link rel="stylesheet" href="assets/estilo.css">
+  <link rel="stylesheet" href="assets/telas.css">
+  <link rel="stylesheet" href="assets/impressao.css" media="print">
+</head>
+<body>
+
+  <div class="aplicativo" id="aplicativo">
+
+    <aside class="barra-lateral">
+      <div class="marca-aplicativo">
+        <span class="marca-aplicativo__nome">ChannelPro</span>
+        <span class="marca-aplicativo__canal" id="nome-canal-lateral">Meu canal</span>
+      </div>
+
+      <nav class="navegacao" id="navegacao" aria-label="Telas do aplicativo">
+        <button type="button" class="navegacao__item" data-tela="hoje" aria-current="page">
+          <span class="navegacao__icone" aria-hidden="true">◉</span>
+          <span>Hoje</span>
+          <span class="navegacao__contador oculto" id="contador-hoje" hidden>0</span>
+        </button>
+        <button type="button" class="navegacao__item" data-tela="conteudo">
+          <span class="navegacao__icone" aria-hidden="true">▦</span>
+          <span>Conteúdo</span>
+        </button>
+        <button type="button" class="navegacao__item" data-tela="dinheiro">
+          <span class="navegacao__icone" aria-hidden="true">◫</span>
+          <span>Dinheiro</span>
+        </button>
+        <button type="button" class="navegacao__item" data-tela="marcas">
+          <span class="navegacao__icone" aria-hidden="true">◆</span>
+          <span>Marcas</span>
+        </button>
+      </nav>
+
+      <div class="barra-lateral__rodape">
+        <button type="button" class="botao botao--sutil" id="botao-ajustes" style="color:#ffffff;justify-content:flex-start;">
+          <span aria-hidden="true">⚙</span> Ajustes e backup
+        </button>
+        <span id="versao-aplicativo">versão 1.0 — MVP</span>
+      </div>
+    </aside>
+
+    <main class="conteudo" id="conteudo" tabindex="-1"></main>
+
+    <footer class="rodape-privacidade">
+      <span class="rodape-privacidade__selo">
+        <span aria-hidden="true">🔒</span> Dados no seu computador. Nada é enviado.
+      </span>
+      <span id="rodape-backup">Backup: nunca feito</span>
+    </footer>
+
+  </div>
+
+  <div id="area-avisos" aria-live="polite"></div>
+  <div id="area-impressao" aria-hidden="true"></div>
+
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/dados.js"></script>
+  <script src="assets/js/rotulos.js"></script>
+  <script src="assets/js/relatorios.js"></script>
+  <script src="assets/js/tela-hoje.js"></script>
+  <script src="assets/js/tela-conteudo.js"></script>
+  <script src="assets/js/tela-dinheiro.js"></script>
+  <script src="assets/js/tela-marcas.js"></script>
+  <script src="assets/js/importar.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
